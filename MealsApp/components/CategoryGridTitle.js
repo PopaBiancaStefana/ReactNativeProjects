@@ -3,7 +3,6 @@ import {
   View,
   StyleSheet,
   Pressable,
-  Button,
   Platform,
 } from "react-native";
 
