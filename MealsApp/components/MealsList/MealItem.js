@@ -1,14 +1,12 @@
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import MealDetails from "../screens/MealDetailScreen";
-
-function MealItem({ id, title, imageUrl}) {
-    const navigation = useNavigation();
+function MealItem({ id, title, imageUrl }) {
+  const navigation = useNavigation();
 
   function onItemPressHandler() {
     navigation.navigate("MealDetail", {
-        mealId: id
+      mealId: id,
     });
   }
 
