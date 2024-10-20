@@ -1,11 +1,17 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { StatusBar } from "expo-status-bar";
+import { useContext, useEffect, useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import AppLoading from "expo-app-loading";
 
-import LoginScreen from './screens/LoginScreen';
-import SignupScreen from './screens/SignupScreen';
-import WelcomeScreen from './screens/WelcomeScreen';
-import { Colors } from './constants/styles';
+import LoginScreen from "./screens/LoginScreen";
+import SignupScreen from "./screens/SignupScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
+import { Colors } from "./constants/styles";
+import AuthContextProvider from "./store/auth-context";
+import { AuthContext } from "./store/auth-context";
+import IconButton from "./components/UI/IconButton";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +20,7 @@ function AuthStack() {
     <Stack.Navigator
       screenOptions={{
         headerStyle: { backgroundColor: Colors.primary500 },
-        headerTintColor: 'white',
+        headerTintColor: "white",
         contentStyle: { backgroundColor: Colors.primary100 },
       }}
     >
@@ -25,33 +31,78 @@ function AuthStack() {
 }
 
 function AuthenticatedStack() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: { backgroundColor: Colors.primary500 },
-        headerTintColor: 'white',
+        headerTintColor: "white",
         contentStyle: { backgroundColor: Colors.primary100 },
       }}
     >
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      <Stack.Screen
+        name="Welcome"
+        component={WelcomeScreen}
+        options={{
+          headerRight: ({ tintColor }) => (
+            <IconButton
+              icon="exit"
+              color={tintColor}
+              size={24}
+              onPress={authCtx.logout}
+            />
+          ),
+        }}
+      />
     </Stack.Navigator>
   );
 }
 
 function Navigation() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <NavigationContainer>
-      <AuthStack />
+      {!authCtx.isAuthenticated && <AuthStack />}
+      {authCtx.isAuthenticated && <AuthenticatedStack />}
     </NavigationContainer>
   );
+}
+
+function Root() {
+  const [isTryingLogin, setIsTryingLogin] = useState(true);
+
+  const authCtx = useContext(AuthContext);
+
+  useEffect(() => {
+    async function fetchToken() {
+      const storedToken = await AsyncStorage.getItem("token");
+
+      if (storedToken) {
+        authCtx.authenticate(storedToken);
+      }
+
+      setIsTryingLogin(false);
+    }
+
+    fetchToken();
+  }, []);
+
+  if (isTryingLogin) {
+    return <AppLoading />;
+  }
+
+  return <Navigation />;
 }
 
 export default function App() {
   return (
     <>
       <StatusBar style="light" />
-
-      <Navigation />
+      <AuthContextProvider>
+        <Root />
+      </AuthContextProvider>
     </>
   );
 }
