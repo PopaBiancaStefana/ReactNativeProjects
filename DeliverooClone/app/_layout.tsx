@@ -1,6 +1,8 @@
 import CustomHeader from "../components/CustomHeader";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { Stack } from "expo-router";
+import Colors from "../constants/Colors";
+import IconButton from "../components/UI/Buttons/IconButton";
 
 export const unstable_settings = {
   initialRouteName: "index",
@@ -16,7 +18,25 @@ export default function RootLayoutNav() {
             header: () => <CustomHeader />,
           }}
         />
-        <Stack.Screen name="(modal)/filter" />
+        <Stack.Screen
+          name="(modal)/filter"
+          options={{
+            presentation: "modal",
+            headerTitle: "Filter",
+            headerShadowVisible: false,
+            headerStyle: {
+              backgroundColor: Colors.lightGrey,
+            },
+            headerLeft: () => (
+              <IconButton
+                icon="close-outline"
+                link="\"
+                size={28}
+                color={Colors.primary}
+              />
+            ),
+          }}
+        />
       </Stack>
     </BottomSheetModalProvider>
   );

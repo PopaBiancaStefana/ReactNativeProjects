@@ -2,25 +2,22 @@ import { View, StyleSheet } from "react-native";
 import React from "react";
 import { TextInput } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../constants/Colors";
+import Colors from "../../constants/Colors";
 
 type SearchBarProps = {
   placeholder: string;
 };
 
-const SearchBar = ({placeholder} : SearchBarProps) => (
-    <View style={styles.searchSection}>
-      <Ionicons
-        style={styles.searchIcon}
-        name="ios-search"
-        size={20}
-        color={Colors.medium}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder={placeholder}
-      />
-    </View>
+const SearchBar = ({ placeholder }: SearchBarProps) => (
+  <View style={styles.searchSection}>
+    <Ionicons
+      style={styles.searchIcon}
+      name="ios-search"
+      size={20}
+      color={Colors.medium}
+    />
+    <TextInput style={styles.input} placeholder={placeholder} />
+  </View>
 );
 
 const styles = StyleSheet.create({

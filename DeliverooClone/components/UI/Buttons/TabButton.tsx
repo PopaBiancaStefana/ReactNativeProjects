@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import Colors from "../../constants/Colors";
+import Colors from "../../../constants/Colors";
 
 type TabButtonProps = {
   title: string;
@@ -15,7 +15,8 @@ const TabButton = ({ title, isActive = false }: TabButtonProps) => {
 
   return (
     <TouchableOpacity
-      style={active ? styles.toggleActive : styles.toggleInactive}>
+      style={active ? styles.toggleActive : styles.toggleInactive}
+    >
       <Text style={active ? styles.activeText : styles.inactiveText}>
         {title}
       </Text>

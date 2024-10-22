@@ -10,13 +10,14 @@ type SubheaderProps = {
   title: string;
   icon: keyof typeof Ionicons.glyphMap;
   link: string;
+  style?: {};
 };
 
-const Subheader = ({ title, icon, link }: SubheaderProps) => {
+const Subheader = ({ title, icon, link, style }: SubheaderProps) => {
   return (
     <Link href={link as any} asChild>
     <TouchableOpacity>
-      <View style={styles.item}>
+      <View style={[styles.item, style]}>
         <Ionicons name={icon} size={24} color={Colors.medium} />
         <Text style={styles.title}>{title}</Text>
         <Ionicons name="chevron-forward" size={24} color={Colors.primary} />
@@ -32,12 +33,13 @@ const styles = StyleSheet.create({
   },
   item: {
     flexDirection: "row",
-    gap: 10,
+    gap: 12,
     alignItems: "center",
-    backgroundColor: "#fff",
     padding: 12,
     borderColor: Colors.grey,
-    borderWidth: 1,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    backgroundColor: "white",
   },
 });
 

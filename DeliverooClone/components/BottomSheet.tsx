@@ -6,8 +6,9 @@ import {
   useBottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import Subheader from "./UI/Subheader";
-import LongButton from "./UI/LongButton";
-import TabButton from "./UI/TabButton";
+import LongButton from "./UI/Buttons/LongButton";
+import TabButton from "./UI/Buttons/TabButton";
+import Colors from "../constants/Colors";
 
 export type Ref = BottomSheetModal;
 
@@ -56,6 +57,7 @@ const BottomSheet = forwardRef<Ref>((props, ref) => {
 const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
+    backgroundColor: Colors.lightGrey,
   },
   toggle: {
     flexDirection: "row",

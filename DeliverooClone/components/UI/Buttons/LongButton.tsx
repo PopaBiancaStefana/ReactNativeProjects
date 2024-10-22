@@ -2,16 +2,17 @@ import { StyleSheet, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import Colors from "../../constants/Colors";
+import Colors from "../../../constants/Colors";
 
 type LongButtonProps = {
   title: string;
-  onPress: () => {};
+  onPress: () => void;
+  style?: {};
 };
 
-const LongButton = ({ title, onPress }: LongButtonProps) => {
+const LongButton = ({ title, onPress, style }: LongButtonProps) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={() => onPress}>
+    <TouchableOpacity style={[styles.button, style]} onPress={onPress}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -24,11 +25,12 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primary,
     padding: 16,
     margin: 16,
-    borderRadius: 4,
+    borderRadius: 8,
     alignItems: "center",
   },
   buttonText: {
     color: "#fff",
     fontWeight: "bold",
+    fontSize: 16,
   },
 });
