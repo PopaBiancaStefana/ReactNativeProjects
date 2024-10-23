@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import React, { useState, useEffect } from "react";
 
 import Colors from "../../constants/Colors";
-import LongButton from "../../components/UI/Buttons/LongButton";
+import LongButton from "../../components/Buttons/LongButton";
 import {
   useSharedValue,
   withTiming,
@@ -10,10 +10,10 @@ import {
 } from "react-native-reanimated";
 import { useNavigation } from "expo-router";
 import categories from "../../assets/data/filter.json";
-import ItemBox from "../../components/ItemBox";
-import CheckboxList from "../../components/UI/CheckboxList/CheckboxList";
-import { Category } from "../../components/UI/CheckboxList/ListItem";
-import AnimatedOutlineButton from "../../components/UI/Buttons/AnimatedOutlineButton";
+import ItemBox from "./ItemBox";
+import CheckboxList from "../../components/CheckboxList/CheckboxList";
+import { Category } from "../../components/CheckboxList/ListItem";
+import AnimatedOutlineButton from "../../components/Buttons/AnimatedOutlineButton";
 
 const Filter = () => {
   const navigation = useNavigation();

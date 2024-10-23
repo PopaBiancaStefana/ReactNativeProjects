@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from "react-native";
 import React, { forwardRef } from "react";
-import Subheader from "./UI/Subheader";
-import TabButton from "./UI/Buttons/TabButton";
-import BottomSheetWrapper, { Ref } from "./UI/BottomSheetWrapper";
+import Subheader from "../components/Subheader";
+import TabButton from "../components/Buttons/TabButton";
+import BottomSheetWrapper, { Ref } from "../components/BottomSheetWrapper";
 
 const OptionsBottomSheet = forwardRef<Ref>((props, ref) => {
   return (

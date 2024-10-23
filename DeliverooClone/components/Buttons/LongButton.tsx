@@ -2,7 +2,7 @@ import { StyleSheet, Text } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import Colors from "../../../constants/Colors";
+import Colors from "../../constants/Colors";
 
 type LongButtonProps = {
   title: string;

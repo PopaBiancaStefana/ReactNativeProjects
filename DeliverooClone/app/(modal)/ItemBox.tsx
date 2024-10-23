@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 
-import Subheader from "./UI/Subheader";
+import Subheader from "../../components/Subheader";
 
 const ItemBox = () => {
   return (

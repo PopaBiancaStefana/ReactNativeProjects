@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Link } from "expo-router";
 
-import Colors from "../../constants/Colors";
+import Colors from "../constants/Colors";
 
 type SubheaderProps = {
   title: string;
@@ -16,13 +16,13 @@ type SubheaderProps = {
 const Subheader = ({ title, icon, link, style }: SubheaderProps) => {
   return (
     <Link href={link as any} asChild>
-    <TouchableOpacity>
-      <View style={[styles.item, style]}>
-        <Ionicons name={icon} size={24} color={Colors.medium} />
-        <Text style={styles.title}>{title}</Text>
-        <Ionicons name="chevron-forward" size={24} color={Colors.primary} />
-      </View>
-    </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={[styles.item, style]}>
+          <Ionicons name={icon} size={24} color={Colors.medium} />
+          <Text style={styles.title}>{title}</Text>
+          <Ionicons name="chevron-forward" size={24} color={Colors.primary} />
+        </View>
+      </TouchableOpacity>
     </Link>
   );
 };

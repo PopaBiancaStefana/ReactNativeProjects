@@ -5,9 +5,9 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 
-import SearchBar from "./UI/SearchBar";
-import IconButton from "./UI/Buttons/IconButton";
-import ImageButton from "./UI/Buttons/ImageButton";
+import SearchBar from "../components/SearchBar";
+import IconButton from "../components/Buttons/IconButton";
+import ImageButton from "../components/Buttons/ImageButton";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import OptionsBottomSheet from "./OptionsBottomSheet";
 

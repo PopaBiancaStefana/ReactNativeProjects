@@ -3,7 +3,7 @@ import React from "react";
 import Animated from "react-native-reanimated";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-import Colors from "../../../constants/Colors";
+import Colors from "../../constants/Colors";
 
 type AnimatedOutlineButtonProps = {
   title: string;

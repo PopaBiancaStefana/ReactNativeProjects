@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-import Colors from "../../../constants/Colors";
+import Colors from "../../constants/Colors";
 
 export interface Category {
   name: string;

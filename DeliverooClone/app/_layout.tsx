@@ -1,8 +1,8 @@
-import CustomHeader from "../components/CustomHeader";
+import CustomHeader from "../layout/CustomHeader";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { Stack } from "expo-router";
 import Colors from "../constants/Colors";
-import IconButton from "../components/UI/Buttons/IconButton";
+import IconButton from "../components/Buttons/IconButton";
 
 export const unstable_settings = {
   initialRouteName: "index",

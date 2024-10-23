@@ -6,7 +6,7 @@ import {
   useBottomSheetModal,
 } from "@gorhom/bottom-sheet";
 import LongButton from "./Buttons/LongButton";
-import Colors from "../../constants/Colors";
+import Colors from "../constants/Colors";
 
 type BottomSheetWrapperProps = {
   snapPoints?: string[];
