@@ -24,8 +24,6 @@ const TabButton = ({ title, isActive = false }: TabButtonProps) => {
   );
 };
 
-export default TabButton;
-
 const styles = StyleSheet.create({
   toggleActive: {
     backgroundColor: Colors.primary,
@@ -46,3 +44,5 @@ const styles = StyleSheet.create({
     color: Colors.primary,
   },
 });
+
+export default TabButton;

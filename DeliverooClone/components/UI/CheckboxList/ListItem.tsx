@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-import Colors from '../../../constants/Colors';
+import Colors from "../../../constants/Colors";
 
 export interface Category {
   name: string;
@@ -14,9 +14,9 @@ type ListItemProps = {
   item: Category;
   index: number;
   onPress: (index: number) => void;
-}
+};
 
-const ListItem = ({item, index, onPress} : ListItemProps) => {
+const ListItem = ({ item, index, onPress }: ListItemProps) => {
   return (
     <View style={styles.item}>
       <Text style={styles.itemText}>
@@ -26,16 +26,18 @@ const ListItem = ({item, index, onPress} : ListItemProps) => {
         isChecked={item.checked}
         fillColor={Colors.primary}
         //unfillColor="#fff"
-        iconStyle={{ borderColor: Colors.primary, borderRadius: 4, borderWidth: 2 }}
+        iconStyle={{
+          borderColor: Colors.primary,
+          borderRadius: 4,
+          borderWidth: 2,
+        }}
         innerIconStyle={{ borderColor: Colors.primary, borderRadius: 4 }}
         onPress={() => onPress(index)}
-        style={styles.checkbox} 
+        style={styles.checkbox}
       />
     </View>
-  )
-}
-
-export default ListItem
+  );
+};
 
 const styles = StyleSheet.create({
   item: {
@@ -53,4 +55,6 @@ const styles = StyleSheet.create({
   checkbox: {
     width: 40,
   },
-})
+});
+
+export default ListItem;

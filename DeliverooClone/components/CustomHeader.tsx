@@ -8,8 +8,8 @@ import Colors from "../constants/Colors";
 import SearchBar from "./UI/SearchBar";
 import IconButton from "./UI/Buttons/IconButton";
 import ImageButton from "./UI/Buttons/ImageButton";
-import BottomSheet from "./BottomSheet";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import OptionsBottomSheet from "./OptionsBottomSheet";
 
 const CustomHeader = () => {
   const bottomSheetRef = useRef<BottomSheetModal>(null);
@@ -20,7 +20,7 @@ const CustomHeader = () => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <BottomSheet ref={bottomSheetRef} />
+      <OptionsBottomSheet ref={bottomSheetRef} />
 
       <View style={styles.container}>
         <ImageButton

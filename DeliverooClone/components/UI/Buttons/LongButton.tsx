@@ -18,8 +18,6 @@ const LongButton = ({ title, onPress, style }: LongButtonProps) => {
   );
 };
 
-export default LongButton;
-
 const styles = StyleSheet.create({
   button: {
     backgroundColor: Colors.primary,
@@ -34,3 +32,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
+export default LongButton;
