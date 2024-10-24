@@ -16,7 +16,8 @@ const OptionsBottomSheet = forwardRef<Ref>((props, ref) => {
         <Subheader
           title="Your Location"
           icon="location-outline"
-          link="/(modal)/location-search"
+          link="/"
+          //link="/(modal)/location-search"
         />
         <Text style={styles.subheader}>Arrival Time</Text>
         <Subheader title="Now" icon="stopwatch-outline" link="/" />

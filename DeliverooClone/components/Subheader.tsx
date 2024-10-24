@@ -2,20 +2,20 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Link } from "expo-router";
+import { Link, Href } from "expo-router";
 
 import Colors from "../constants/Colors";
 
 type SubheaderProps = {
   title: string;
   icon: keyof typeof Ionicons.glyphMap;
-  link: string;
+  link: Href<string>;
   style?: {};
 };
 
 const Subheader = ({ title, icon, link, style }: SubheaderProps) => {
   return (
-    <Link href={link as any} asChild>
+    <Link href={link} asChild>
       <TouchableOpacity>
         <View style={[styles.item, style]}>
           <Ionicons name={icon} size={24} color={Colors.medium} />

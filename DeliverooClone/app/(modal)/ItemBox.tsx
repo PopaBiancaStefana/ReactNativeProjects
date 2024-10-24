@@ -10,25 +10,25 @@ const ItemBox = () => {
         <Subheader
           title="Sort"
           icon="arrow-down-outline"
-          link="\"
+          link="/"
           style={styles.item}
         />
         <Subheader
           title="Hygiene rating"
           icon="fast-food-outline"
-          link="\"
+          link="/"
           style={styles.item}
         />
         <Subheader
           title="Offers"
           icon="pricetag-outline"
-          link="\"
+          link="/"
           style={styles.item}
         />
         <Subheader
           title="Dietary"
           icon="nutrition-outline"
-          link="\"
+          link="/"
           style={[styles.item, styles.lastItem]}
         />
       </View>

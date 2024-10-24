@@ -1,27 +1,27 @@
 export const categories = [
   {
     text: 'Restaurants',
-    img: require('@/assets/data/c1.png'),
+    img: require('../images/c1.png'),
   },
   {
     text: 'Grocery',
-    img: require('@/assets/data/c2.png'),
+    img: require('../images/c2.png'),
   },
   {
     text: 'Offers',
-    img: require('@/assets/data/c3.png'),
+    img: require('../images/c3.png'),
   },
   {
     text: 'Pickup',
-    img: require('@/assets/data/c4.png'),
+    img: require('../images/c4.png'),
   },
   {
     text: 'HOP',
-    img: require('@/assets/data/c5.png'),
+    img: require('../images/c5.png'),
   },
   {
     text: 'Pharmacy',
-    img: require('@/assets/data/c6.png'),
+    img: require('../images/c6.png'),
   },
 ];
 
@@ -31,7 +31,7 @@ export const restaurants = [
     rating: '4.5 Excellent',
     ratings: '(500+)',
     distance: '0.7 miles away',
-    img: require('@/assets/data/r1.jpeg'),
+    img: require('../images/r1.jpeg'),
     tags: ['Italian', 'Pizza', 'Pasta', 'Salads'],
     duration: '35 - 45',
   },
@@ -41,7 +41,7 @@ export const restaurants = [
     rating: '4.9 Excellent',
     ratings: '(500+)',
     distance: '1.7 miles away',
-    img: require('@/assets/data/r2.jpeg'),
+    img: require('../images/r2.jpeg'),
     tags: ['Salads', 'Vegan', 'Healthy', 'British'],
     duration: '15 - 30',
   },
@@ -51,7 +51,7 @@ export const restaurants = [
     rating: '4.5 Excellent',
     ratings: '(500+)',
     distance: '3 miles away',
-    img: require('@/assets/data/r3.jpeg'),
+    img: require('../images/r3.jpeg'),
     tags: ['Spanish', 'Salads', 'Tpas', 'Pasta'],
     duration: '25 - 45',
   },

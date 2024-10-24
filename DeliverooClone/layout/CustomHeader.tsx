@@ -28,20 +28,21 @@ const CustomHeader = () => {
           onPress={openModal}
         />
 
-        <TouchableOpacity style={styles.titleContainer} onPress={openModal}>
-          <Text style={styles.title}>Delivery Now</Text>
-          <View style={styles.locationName}>
-            <Text style={styles.subtitle}>San Francisco, CA</Text>
-            <Ionicons name="chevron-down" size={24} color={Colors.primary} />
-          </View>
-        </TouchableOpacity>
+        <View style={styles.titleContainer}>
+          <TouchableOpacity onPress={openModal}>
+            <Text style={styles.title}>Delivery · Now</Text>
+            <View style={styles.locationName}>
+              <Text style={styles.subtitle}>San Francisco, CA</Text>
+              <Ionicons name="chevron-down" color={Colors.primary} />
+            </View>
+          </TouchableOpacity>
+        </View>
 
         <IconButton
           icon="person-outline"
-          size={24}
           color={Colors.primary}
           link="/"
-          style={{ backgroundColor: Colors.grey }}
+          style={{ backgroundColor: Colors.lightGrey }}
         />
       </View>
       <View style={styles.searchContainer}>
@@ -50,7 +51,7 @@ const CustomHeader = () => {
           icon="options-outline"
           size={24}
           color={Colors.primary}
-          link={"/(modal)/filter" as any}
+          link={"/(modal)/filter"}
         />
       </View>
     </SafeAreaView>
@@ -84,7 +85,6 @@ const styles = StyleSheet.create({
   },
   locationName: {
     flexDirection: "row",
-    alignItems: "center",
   },
   searchContainer: {
     height: 60,

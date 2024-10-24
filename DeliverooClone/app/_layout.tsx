@@ -30,9 +30,27 @@ export default function RootLayoutNav() {
             headerLeft: () => (
               <IconButton
                 icon="close-outline"
-                link="\"
+                link="/"
                 size={28}
                 color={Colors.primary}
+              />
+            ),
+          }}
+        />
+        <Stack.Screen name="details" options={{ headerTitle: "Details" }} />
+        <Stack.Screen
+          name="(modal)/dish"
+          options={{
+            presentation: "modal",
+            headerTitle: "",
+            headerTransparent: true,
+
+            headerLeft: () => (
+              <IconButton
+                icon="close-outline"
+                color={Colors.primary}
+                link="/details"
+                style={{ backgroundColor: "white" }}
               />
             ),
           }}
