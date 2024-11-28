@@ -2,7 +2,6 @@ import { StyleSheet, View, Text } from "react-native";
 import React from "react";
 
 import { restaurants } from "../assets/data/home";
-import { Link } from "expo-router";
 import Card from "../components/Card";
 import HorizontalScroll from "../components/HorizontalScroll";
 import Colors from "../constants/Colors";

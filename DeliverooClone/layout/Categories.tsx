@@ -1,16 +1,11 @@
 import {
-  ScrollView,
   StyleSheet,
-  Image,
-  View,
   Text,
-  TouchableOpacity,
 } from "react-native";
 import React from "react";
 
 import { categories } from "../assets/data/home";
 import HorizontalScroll from "../components/HorizontalScroll";
-import { Link } from "expo-router";
 import Card from "../components/Card";
 
 const Categories = () => {

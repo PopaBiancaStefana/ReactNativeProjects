@@ -6,9 +6,7 @@ import Colors from "../../constants/Colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Animated, {
     FadeIn,
-    FadeInDown,
     FadeInLeft,
-    FadeInUp,
   } from "react-native-reanimated";
 import LongButton from "../../components/Buttons/LongButton";
 import useBasketStore from "../../store/basketStore";
